@@ -1,6 +1,6 @@
 <?php
 $usuario=$_POST['email'];
-$clave=$_POST['pswd'];
+$clave=md5($_POST['pswd']);
 
 $conexion=mysqli_connect("localhost","root","123","Administracion");
 $consulta="SELECT * FROM baseadmin WHERE usuario='$usuario' and clave='$clave'";
